@@ -1,7 +1,7 @@
 describe I18n::Backend::Advanced do
-  let(:i18n_backend_advanced) do
-    I18n::Backend::Advanced.new.tap do |_i18n_backend_advanced|
-      _i18n_backend_advanced.load_translations Dir.glob("#{assets_path}/**/*.yml")
+  let(:backend) do
+    described_class.new.tap do |_backend|
+      _backend.load_translations Dir.glob("#{assets_path}/**/*.yml")
     end
   end
 
@@ -12,8 +12,8 @@ describe I18n::Backend::Advanced do
       ["users.index.languages.en", "Englisch"],
       ["users.index.submit", "Abschicken"]
     ]
-    .each do |key, value|
-      expect(i18n_backend_advanced.translate(:de, key)).to eq(value)
+    .each do |_key, _value|
+      expect(backend.translate(:de, _key)).to eq(_value)
     end
   end
 end
