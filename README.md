@@ -37,6 +37,11 @@ Now you can use references in your locale files.
 de:
   application:
     cancel: Abbrechen
+    greet: "Hallo %{user}!"
+    inbox:
+      one: "Eine Nachricht"
+      other: "%{count} Nachrichten"
+
     submit: Abschicken
 
 # config/locales/de/languages.yml
@@ -51,9 +56,12 @@ de:
 de:
   users:
     submit: ~> application.submit
-    
+
     index:
       cancel: ~> application.cancel # t("users.index.cancel") => Abbrechen
+      greet: ~> application.greet   # t("users.index.greet, user: "Max") => Hallo Max!
+      inbox: ~> application.inbox   # t("users.index.inbox, count: 1) => Eine Nachricht
+                                    # t("users.index.inbox, count: 2) => 2 Nachrichten
       languages: ~> languages       # t("users.index.languages.en") => Englisch
       submit: ~> users.submit       # t("users.index.submit") ~> Abschicken
 ```
