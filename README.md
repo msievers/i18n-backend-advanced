@@ -34,7 +34,7 @@ de:
     cancel: Abbrechen
     submit: Abschicken
 
-# config/locales/de/langugages.yml
+# config/locales/de/languages.yml
 de:
   languages:
     de: Deutsch
