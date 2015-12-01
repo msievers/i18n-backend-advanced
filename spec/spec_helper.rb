@@ -13,7 +13,10 @@ end
 
 require "i18n/backend/advanced"
 require "yaml"
-require "pry" rescue LoadError
+begin
+  require "pry"
+rescue LoadError
+end
 
 RSpec.configure do |config|
   # begin --- rspec 3.1 generator
