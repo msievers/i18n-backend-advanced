@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.name          = "i18n-backend-advanced"
   spec.version       = "0.1.1"
   spec.authors       = ["Michael Sievers"]
-  spec.summary       = %q{I18n advanced backend}
+  spec.summary       = %q{A slightly advanced drop-in replacement for I18n::Backend::Simple with support for references (across files)}
   spec.homepage      = "http://github.com/msievers/i18n-backend-advanced"
   spec.license       = "MIT"
 
