@@ -15,8 +15,10 @@ module I18n
           if _value.is_a?(String) && _value.include?("~>")
             while _value.include?("~>")
               referenced_path = [_path.first, _value.gsub("~>", "").strip.split(".").map(&:to_sym)].flatten(1)
-              _value = referenced_path.inject(translations) do |_hash, _key|
-                _hash.try(:[], _key)
+              _value = referenced_path.inject(translations) do |_object, _key|
+                if object.is_a?(Hash)
+                  _object[_key]
+                end
               end
             end
           end
