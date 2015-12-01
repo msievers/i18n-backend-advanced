@@ -1,5 +1,7 @@
 # I18n::Backend::Advanced
 
+This is a drop-in replacement for `I18n::Backend::Simple` which allows inline references to other keys (in other files). References are expanded during `init_translations`. This way, it also works works with packages like `i18n-js` aso.
+
 ## Installation
 
 Add this line to your application's Gemfile:
