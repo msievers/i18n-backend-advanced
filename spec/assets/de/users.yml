@@ -4,5 +4,7 @@ de:
 
     index:
       cancel: ~> application.cancel # t("users.index.cancel") => Abbrechen
+      greet: ~> application.greet   # t("users.index.greet, user: "Max") => Hallo Max!
+      inbox: ~> application.inbox   # t("users.index.inbox, count: 1) => Eine Nachricht
       languages: ~> languages       # t("users.index.languages.en") => Englisch
       submit: ~> users.submit       # t("users.index.submit") ~> Abschicken

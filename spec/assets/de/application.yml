@@ -1,4 +1,9 @@
 de:
   application:
     cancel: Abbrechen
+    greet: "Hallo %{user}!"
+    inbox:
+      one: "Eine Nachricht"
+      other: "%{count} Nachrichten"
+
     submit: Abschicken
