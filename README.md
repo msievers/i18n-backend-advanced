@@ -1,9 +1,5 @@
 # I18n::Backend::Advanced
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/i18n/backend/advanced`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
-
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -22,7 +18,40 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Rails
+
+```ruby
+# somewhere in application.rb
+I18n.backend = I18n::Backend::Advanced.new
+```
+
+Now you can use references in your locale files.
+
+```yaml
+# config/locales/de/application.yml
+de:
+  application:
+    cancel: Abbrechen
+    submit: Abschicken
+
+# config/locales/de/langugages.yml
+de:
+  languages:
+    de: Deutsch
+    en: Englisch
+    es: Spanisch
+    ...
+
+# config/locales/de/users.yml
+de:
+  users:
+    submit: ~> application.submit
+    
+    index:
+      cancel: ~> application.cancel # t("users.index.cancel") => Abbrechen
+      languages: ~> languages       # t("users.index.languages.en") => Englisch
+      submit: ~> users.submit       # t("users.index.submit") ~> Abschicken
+```
 
 ## Development
 
@@ -32,10 +61,8 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/i18n-backend-advanced.
-
+Bug reports and pull requests are welcome on GitHub at https://github.com/msievers/i18n-backend-advanced.
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
