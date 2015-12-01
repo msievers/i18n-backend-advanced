@@ -1,4 +1,10 @@
 language: ruby
 rvm:
-  - 2.2.3
+  - 1.9
+  - 2.0
+  - 2.1
+  - 2.2
+  - jruby-1.7
+  - jruby
+  - rbx
 before_install: gem install bundler -v 1.10.6

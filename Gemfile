@@ -9,7 +9,7 @@ group :development, :test do
   gem "simplecov", ">= 0.8.0"
 end
 
-if !ENV["CI"]
+if !ENV["CI"] && RUBY_ENGINE == "ruby"
   group :development do
     gem "pry",                "~> 0.9.12.6"
     gem "pry-byebug",         "<= 1.3.2"
