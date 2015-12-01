@@ -5,7 +5,9 @@
 
 This is a drop-in replacement for `I18n::Backend::Simple` which allows inline references to other keys (in other files). References are expanded during `init_translations`. This way, it also works with packages like `i18n-js`.
 
-## Installation
+## Usage
+
+### Rails
 
 Add this line to your application's Gemfile:
 
@@ -17,13 +19,7 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install i18n-backend-advanced
-
-## Usage
-
-### Rails
+Set `I18n::Backend::Advance` as default `I18n.backend`.
 
 ```ruby
 # somewhere in application.rb
