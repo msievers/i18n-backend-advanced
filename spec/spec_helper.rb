@@ -27,7 +27,11 @@ RSpec.configure do |config|
   # end --- rspec 3.1 generator
 end
 
+def assets_path
+  File.expand_path(File.join(File.dirname(__FILE__), "assets"))
+end
+
 def read_asset(path_to_file)
-  File.read(File.expand_path(File.join(File.dirname(__FILE__), "assets", path_to_file)))
+  File.read(assets_path, path_to_file)
 end
 

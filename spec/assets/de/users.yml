@@ -1,0 +1,8 @@
+de:
+  users:
+    submit: ~> application.submit
+
+    index:
+      cancel: ~> application.cancel # t("users.index.cancel") => Abbrechen
+      languages: ~> languages       # t("users.index.languages.en") => Englisch
+      submit: ~> users.submit       # t("users.index.submit") ~> Abschicken
