@@ -1,4 +1,6 @@
 # I18n::Backend::Advanced
+[![Test Coverage](https://codeclimate.com/github/msievers/i18n-backend-advanced/badges/coverage.svg)](https://codeclimate.com/github/msievers/i18n-backend-advanced/coverage)
+[![Code Climate](https://codeclimate.com/github/msievers/i18n-backend-advanced/badges/gpa.svg)](https://codeclimate.com/github/msievers/i18n-backend-advanced)
 
 This is a drop-in replacement for `I18n::Backend::Simple` which allows inline references to other keys (in other files). References are expanded during `init_translations`. This way, it also works works with packages like `i18n-js` aso.
 
