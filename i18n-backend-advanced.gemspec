@@ -1,11 +1,10 @@
 # coding: utf-8
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "i18n/backend/advanced/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "i18n-backend-advanced"
-  spec.version       = I18n::Backend::Advanced::VERSION
+  spec.version       = "0.1.0"
   spec.authors       = ["Michael Sievers"]
   spec.summary       = %q{I18n advanced backend}
   spec.homepage      = "http://github.com/msievers/i18n-backend-advanced"
